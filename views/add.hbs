@@ -1,0 +1,29 @@
+<div class="w-75 mx-auto mt-3">
+    <h1 class="mb-3">Add Products</h1>
+    {{#if addProductsError}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error</strong> {{addProductsError}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {{/if}}
+    <form action="/add-products" method="post">
+        <div class="form-floating mb-3">         
+            <input type="text" name="title" class="form-control"  id="floatingInput" placeholder="Title">
+            <label for="floatingInput">Title</label>
+       </div>
+       <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" id="floatingTextarea2" placeholder="Description" style="height: 100px;"></textarea>
+            <label for="floatingTextarea2">Description</label>
+       </div>
+
+       <div class="form-floating mb-3">
+            <input type="text" name="image" class="form-control"  id="floatingImage" placeholder="Image">
+            <label for="floatingImage">Image</label>
+       </div>
+       <div class="form-floating mb-3">
+            <input type="number" name="price" class="form-control"  id="floatingPrice" placeholder="Price">
+            <label for="floatingPrice">Price</label>
+       </div>
+        <button type="submit" class="btn btn-primary mt-3">Add products</button>
+    </form>
+</div>

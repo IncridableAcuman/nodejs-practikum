@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link " href="/">Main</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="/products">Products</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="/add" aria-disabled="true">Add</a>
+  </li>
+  {{#if token}} 
+  <li class="nav-item">
+      <a href="/logout" class=" btn btn-danger">Logout</a>
+    </li>
+  {{else}}
+  <li class="nav-item">
+      <a href="/login" class=" btn btn-primary">Login</a>
+    </li>
+    <li class="nav-item">
+      <a href="/register" class=" btn btn-secondary">Register</a>
+    </li>
+  {{/if}}
+   
+</ul>
+<hr>
+</div>

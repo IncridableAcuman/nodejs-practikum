@@ -1,0 +1,29 @@
+<div class="w-75 mx-auto mt-3">
+    <h1 class="mb-3">Edit Product</h1>
+    {{#if editProductError}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error</strong> {{editProductError}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {{/if}}
+    <form action="/edit-product/{{product._id}}" method="post">
+        <div class="form-floating mb-3">         
+            <input type="text" value="{{product.title}}" name="title" class="form-control"  id="floatingInput" placeholder="Title">
+            <label for="floatingInput">Title</label>
+       </div>
+       <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" id="floatingTextarea2" placeholder="Description" style="height: 200px;">{{product.description}}</textarea>
+            <label for="floatingTextarea2">Description</label>
+       </div>
+
+       <div class="form-floating mb-3">
+            <input type="text" value="{{product.image}}" name="image" class="form-control"  id="floatingImage" placeholder="Image">
+            <label for="floatingImage">Image</label>
+       </div>
+       <div class="form-floating mb-3">
+            <input type="number" value="{{product.price}}" name="price" class="form-control"  id="floatingPrice" placeholder="Price">
+            <label for="floatingPrice">Price</label>
+       </div>
+        <button type="submit" class="btn btn-primary mt-3">Edit product</button>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-7">
+        <div class="w-75 mx-auto mt-3">
+    <p class="fs-1">Register</p>
+    {{#if registerError}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error</strong> {{registerError}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {{/if}}
+    <form action="/register" method="post">
+    <div class="d-flex gap-3 ">
+            <div class="form-floating mb-3 w-50">
+            <input type="text" name="firstname" class="form-control"  id="floatingInput" placeholder="firstname">
+            <label for="floatingInput">First Name</label>
+        </div>
+
+        <div class="form-floating mb-3 w-50">
+            <input type="text" name="lastname" class="form-control"  id="floatingInput" placeholder="lastname">
+            <label for="floatingInput">Last Name</label>
+        </div>
+
+    </div>
+
+        <div class="form-floating mb-3">         
+            <input type="email" name="email" class="form-control"  id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+       </div>
+
+       <div class="form-floating mb-3">
+            <input type="password" name="password" class="form-control"  id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+       </div>
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+    </form>
+    
+</div>
+    </div>
+    <div class="col-md-5">
+        <img src="/public/Img.png" alt="..." width="100%">
+    </div>
+</div>
